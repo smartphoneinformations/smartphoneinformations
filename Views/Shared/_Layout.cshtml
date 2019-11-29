@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @*<meta http-equiv="Content-Type" content="text/html" />*@
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>@ViewBag.Title - Informação do Smartphone</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+
+
+    @*<meta http-equiv="X-UA-Compatible" content="ie=edge">*@
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fontes personalizadas para este template -->
+    <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/vendor/simple-line-icons/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="~/device-mockups/device-mockups.min.css" />
+
+    <!-- stilos personalizados para este template -->
+    <link href="~/css/new-age.min.css" rel="stylesheet" />
+
+
+</head>
+<body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+
+            @*<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">*@
+            @*<span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>*@
+            @*</button>*@
+            @Html.ActionLink("Informação do Smartphone", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        @Html.Partial("_LoginPartial")
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#detalhes">Detalhes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#features">Recursos</a>
+                    </li>
+                    @*<li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
+                    </li>*@
+                    <li class="nav-item">
+                        @Html.ActionLink("Contato", "Contact", "Home")
+                    </li>
+
+                    @*<li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">Sobre</a>
+                    </li>*@
+                    <li class="nav-item">
+                        @Html.ActionLink("Sobre", "About", "Home")
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#page-top">Subir</a>
+                    </li>
+
+                    @*<li class="nav-item">@Html.ActionLink("Início", "Index", "Home")</li>*@
+                    @*<li>@Html.ActionLink("Smartphones", "Index", "Produtos")</li>*@
+
+                </ul>
+
+            </div>
+        </div>
+
+    </nav>
+
+
+ 
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Smartphone Informations 2019. Todos os direitos reservados.</p>
+        </footer>
+  
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="~/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="~/js/new-age.min.js"></script>
+</body>
+</html>

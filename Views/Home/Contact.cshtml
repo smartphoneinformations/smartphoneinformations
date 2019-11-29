@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+@*<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>*@
+
+<section class="contact bg-primary" id="contact">
+    <div class="container">
+        <h2>
+            Entre em Contato Conosco!
+            <i class="fas fa-heart"></i>
+        </h2>
+        <form>
+            <p>Nome Completo:</p>
+            <input type="text" id="name" name="user_name"><br>
+
+            <br><p>Email:</p>
+            <input type="email" id="mail" name="user_email"><br>
+
+            <br><p>Mensagem: </p>
+            <textarea id="msg" name="user_message"></textarea><br>
+
+            <br><a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger">Enviar!</a>
+        </form>
+    </div>
+</section>
